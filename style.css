@@ -1,0 +1,228 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #666;
+}
+
+    .tab-btn:hover {
+        color: #667eea;
+    }
+
+    .tab-btn.active {
+        color: #667eea;
+        border-bottom: 3px solid #667eea;
+    }
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+/* Cards */
+.card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+    .card h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background: #5a67d8;
+    }
+
+.btn-success {
+    background: #48bb78;
+    color: white;
+}
+
+    .btn-success:hover {
+        background: #38a169;
+    }
+
+.btn-danger {
+    background: #f56565;
+    color: white;
+}
+
+    .btn-danger:hover {
+        background: #e53e3e;
+    }
+
+.attendance-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.status-success {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-error {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: #667eea;
+    color: white;
+}
+
+/* Leave Requests */
+.leave-request {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #ed8936;
+}
+
+    .leave-request.pending {
+        border-left-color: #ed8936;
+    }
+
+    .leave-request.approved {
+        border-left-color: #48bb78;
+    }
+
+    .leave-request.rejected {
+        border-left-color: #f56565;
+    }
+
+.request-actions {
+    margin-top: 10px;
+}
+
+    .request-actions button {
+        margin-right: 10px;
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}

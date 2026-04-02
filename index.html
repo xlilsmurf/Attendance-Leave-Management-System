@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance & Leave Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Attendance & Leave Management System</h1>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('attendance')">📌 Attendance</button>
+            <button class="tab-btn" onclick="showTab('leave')">✈️ Leave Request</button>
+            <button class="tab-btn" onclick="showTab('history')">📊 History</button>
+        </div>
+
+        <!-- Attendance Tab -->
+        <div id="attendance-tab" class="tab-content active">
+            <div class="card">
+                <h2>Today's Attendance</h2>
+                <div class="attendance-buttons">
+                    <button id="checkin-btn" class="btn btn-success">✅ Check In</button>
+                    <button id="checkout-btn" class="btn btn-danger" disabled>❌ Check Out</button>
+                </div>
+                <div id="attendance-status" class="status-message"></div>
+            </div>
+
+            <div class="card">
+                <h2>Today's Summary</h2>
+                <p><strong>Status:</strong> <span id="today-status">Not checked in</span></p>
+                <p><strong>Check In Time:</strong> <span id="checkin-time">--:--:--</span></p>
+                <p><strong>Check Out Time:</strong> <span id="checkout-time">--:--:--</span></p>
+            </div>
+        </div>
+
+        <!-- Leave Request Tab -->
+        <div id="leave-tab" class="tab-content">
+            <div class="card">
+                <h2>Request Leave</h2>
+                <form id="leave-form">
+                    <div class="form-group">
+                        <label>Start Date:</label>
+                        <input type="date" id="leave-start" required>
+                    </div>
+                    <div class="form-group">
+                        <label>End Date:</label>
+                        <input type="date" id="leave-end" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Reason:</label>
+                        <textarea id="leave-reason" rows="3" placeholder="Enter reason for leave..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Your Leave Balance</h2>
+                <p><strong>Annual Leave Remaining:</strong> <span id="leave-balance">12</span> days</p>
+            </div>
+
+            <div class="card">
+                <h2>Pending Leave Requests</h2>
+                <div id="pending-leaves"></div>
+            </div>
+        </div>
+
+        <!-- History Tab -->
+        <div id="history-tab" class="tab-content">
+            <div class="card">
+                <h2>Attendance History</h2>
+                <div id="attendance-history"></div>
+            </div>
+
+            <div class="card">
+                <h2>Leave History</h2>
+                <div id="leave-history"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
